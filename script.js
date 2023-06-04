@@ -24,3 +24,27 @@ function oneRound(playerSelection, computerSelection) {
         return("It's a Tie!");
     }
 }
+
+function game() {
+    player = 0
+    computer = 0
+    for (let i = 0; i < 5; i++) {
+        computerSelection = getComputerChoice()
+        playerSelection = prompt("Rock, Paper or Scissor?")
+        round = oneRound(playerSelection, computerSelection)
+        if (round == `You Win! ${playerSelection} beats ${computerSelection}`) {
+            player += 1;
+        } else if (`You Lose! ${computerSelection} beats ${playerSelection}`){
+            computer += 1;
+        }
+    }
+    if (player > computer) {
+        return("Players Wins!");
+    } else if (computer > player) {
+        return("Computer Wins!");
+    } else {
+        return("It's a Tie!")
+    }
+}
+
+console.log(game())
