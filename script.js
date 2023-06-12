@@ -25,19 +25,24 @@ function oneRound(playerSelection, computerSelection) {
     }
 }
 
+const display = document.querySelector('.display');
+const roundResult = document.createElement('div');
+
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper')
 const scissors = document.querySelector('#scissors')
 
 rock.addEventListener('click', () => {
-    console.log(oneRound('rock', getComputerChoice()))
+    roundResult.textContent = (oneRound('rock', getComputerChoice()))
 })
 
 paper.addEventListener('click', () => {
-    console.log(oneRound('paper', getComputerChoice()))
+    roundResult.textContent = (oneRound('paper', getComputerChoice()))
 })
 
 scissors.addEventListener('click', () => {
-    console.log(oneRound('scissor', getComputerChoice()))
+    roundResult.textContent = (oneRound('scissor', getComputerChoice()))
 })
+
+display.appendChild(roundResult);
 
