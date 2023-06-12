@@ -45,7 +45,7 @@ function oneRound(playerSelection, computerSelection) {
 }
 
 const display = document.querySelector('.display');
-const roundResult = document.createElement('div');
+const roundResult = document.querySelector('.result')
 const player = document.querySelector('.player');
 const computer = document.querySelector('.computer');
 
@@ -73,7 +73,5 @@ scissors.addEventListener('click', () => {
     computer.textContent = `Computer: ${c}`
     checkWinner()
 })
-
-display.appendChild(roundResult);
 
 
