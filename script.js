@@ -24,3 +24,20 @@ function oneRound(playerSelection, computerSelection) {
         return("It's a Tie!");
     }
 }
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper')
+const scissors = document.querySelector('#scissors')
+
+rock.addEventListener('click', () => {
+    console.log(oneRound('rock', getComputerChoice()))
+})
+
+paper.addEventListener('click', () => {
+    console.log(oneRound('paper', getComputerChoice()))
+})
+
+scissors.addEventListener('click', () => {
+    console.log(oneRound('scissor', getComputerChoice()))
+})
+
